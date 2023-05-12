@@ -1,0 +1,8 @@
+@media (max-width:670px){
+    body:100%
+}
+
+body{
+    background-color: aqua;
+    width: 100%;
+}
