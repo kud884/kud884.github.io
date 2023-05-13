@@ -1,0 +1,20 @@
+/* 画面全体に背景色を設定 */
+body {
+  background-color: #f5f5f5;
+}
+
+/* タイトルのスタイルを設定 */
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+h2{
+  text-align: center;
+}
