@@ -1,5 +1,4 @@
-// ボタン要素を取得する
-const colorBtn = document.getElementById('color-btn');
+
 // ボタン要素を取得する
 const colorBtn = document.getElementById('color-btn');
 
