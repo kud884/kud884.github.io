@@ -1,16 +1,16 @@
 const img = document.querySelector('img');
 const audios = [
-  new Audio('audio1.MP3'),
-  new Audio('audio2.MP3'),
-  new Audio('audio3.MP3'),
-  new Audio('audio4.MP3'),
-  new Audio('audio5.MP3'),
-  new Audio('audio6.MP3'),
-  new Audio('audio7.MP3'),
-  new Audio('audio8.MP3'),
-  new Audio('audio9.MP3'),
-  new Audio('audio10.MP3'),
-  new Audio('audio11.MP3')
+  new Audio('audio1.mp3'),
+  new Audio('audio2.mp3'),
+  new Audio('audio3.mp3'),
+  new Audio('audio4.mp3'),
+  new Audio('audio5.mp3'),
+  new Audio('audio6.mp3'),
+  new Audio('audio7.mp3'),
+  new Audio('audio8.mp3'),
+  new Audio('audio9.mp3'),
+  new Audio('audio10.mp3'),
+  new Audio('audio11.mp3')
 ];
 
 img.addEventListener('click', () => {
