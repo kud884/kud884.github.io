@@ -52,5 +52,3 @@ img.addEventListener('touchstart', () => {
   }
 });
 
-});
-
