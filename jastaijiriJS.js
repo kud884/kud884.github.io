@@ -12,30 +12,35 @@ const audios = [
   new Audio('audio10.mp3'),
   new Audio('audio11.mp3')
 ];
-let isPlaying = false;
+// タッチ可能なフラグを初期化する
+let touchable = true;
 
+// タッチイベントのリスナーを登録する
 img.addEventListener('touchstart', () => {
-  if (!isPlaying) {
-    // ランダムに音声ファイルを再生する
-    const index = Math.floor(Math.random() * audios.length);
-    audios[index].play();
+  // タッチ不可なら何もしない
+  if (!touchable) return;
+  
+  // タッチ不可にする
+  touchable = false;
 
-    // 別の画像に切り替える
-    img.src = 'image2.png';
+  // ランダムに音声ファイルを再生する
+  const index = Math.floor(Math.random() * audios.length);
+  audios[index].play();
+  
+  // 別の画像に切り替える
+  img.src = 'image2.png';
+  
+  // 0.5秒後に元の画像に戻す
+  setTimeout(() => {
+    img.src = 'image.png';
 
-    // 0.5秒後に元の画像に戻す
+    // タッチ可能にする
     setTimeout(() => {
-      img.src = 'image.png';
-    }, 500);
-
-    isPlaying = true;
-
-    // 再生が終了したらフラグを戻す
-    audios[index].addEventListener('ended', () => {
-      isPlaying = false;
-    });
-  }
+      touchable = true;
+    }, 1000);
+  }, 500);
 });
+
 
 
 
