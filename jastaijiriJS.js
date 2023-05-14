@@ -19,11 +19,11 @@ img.addEventListener('click', () => {
   audios[index].play();
   
   // 別の画像に切り替える
-  img.src = 'image2.png';
+  img.src = 'jas2.png';
   
   // 0.5秒後に元の画像に戻す
   setTimeout(() => {
-    img.src = 'image.png';
+    img.src = 'jas1.png';
   }, 500); // 500ミリ秒 = 0.5秒
 });
 
@@ -33,11 +33,11 @@ img.addEventListener('touchstart', () => {
   audios[index].play();
   
   // 別の画像に切り替える
-  img.src = 'image2.png';
+  img.src = 'jas2.png';
   
   // 0.5秒後に元の画像に戻す
   setTimeout(() => {
-    img.src = 'image.png';
+    img.src = 'jas1.png';
   }, 500);
 });
 
