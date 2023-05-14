@@ -38,7 +38,7 @@ img.addEventListener('touchstart', () => {
     setTimeout(() => {
       touchable = true;
     }, 1000);
-  }, 500);
+  }, 2000);
 });
 
 
