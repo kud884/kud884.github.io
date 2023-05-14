@@ -35,9 +35,9 @@ img.addEventListener('touchstart', () => {
   // 別の画像に切り替える
   img.src = 'image2.png';
   
-  // 0.5秒後に元の画像に戻す
+  // 2秒後に元の画像に戻す
   setTimeout(() => {
     img.src = 'image.png';
-  }, 500);
+  }, 2000);
 });
 
