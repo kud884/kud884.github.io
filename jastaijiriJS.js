@@ -40,8 +40,5 @@ img.addEventListener('touchstart', () => {
     img.src = 'image.png';
   }, 500); // 500ミリ秒 = 0.5秒
 
-setTimeout(() => {
-    canClick = true;
-  }, 500);
 });
 
