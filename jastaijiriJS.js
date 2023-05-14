@@ -1,6 +1,6 @@
 const img = document.querySelector('img');
 const audios = [
-  new Audio('audio1.MP4'),
+  new Audio('audio1.MP3'),
   new Audio('audio2.MP4'),
   new Audio('audio3.MP4'),
   new Audio('audio4.MP4'),
