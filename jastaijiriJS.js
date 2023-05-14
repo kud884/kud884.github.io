@@ -41,16 +41,3 @@ img.addEventListener('touchstart', () => {
   }, 500); // 500ミリ秒 = 0.5秒
 });
 
-const audioElements = document.querySelectorAll('audio');
-
-audioElements.forEach(audio => {
-  audio.addEventListener('click', playAudio);
-  audio.addEventListener('touchstart', playAudio);
-});
-
-function playAudio() {
-  const randomIndex = Math.floor(Math.random() * audioElements.length);
-  const randomAudio = audioElements[randomIndex];
-  randomAudio.currentTime = 0;
-  randomAudio.play();
-}
