@@ -27,18 +27,27 @@ img.addEventListener('click', () => {
   }, 500); // 500ミリ秒 = 0.5秒
 });
 
-img.addEventListener('touchstart', () => {
-  // ランダムに音声ファイルを再生する
-  const index = Math.floor(Math.random() * audios.length);
-  audios[index].play();
-  
-  // 別の画像に切り替える
-  img.src = 'image2.png';
-  
-  // 0.5秒後に元の画像に戻す
-  setTimeout(() => {
-    img.src = 'image.png';
-  }, 500); // 500ミリ秒 = 0.5秒
+let isPlaying = false;
 
+img.addEventListener('touchstart', () => {
+  if (!isPlaying) {
+    isPlaying = true;
+    
+    // ランダムに音声ファイルを再生する
+    const index = Math.floor(Math.random() * audios.length);
+    const audio = audios[index];
+    audio.play();
+    audio.addEventListener('ended', () => {
+      isPlaying = false;
+    });
+    
+    // 別の画像に切り替える
+    img.src = 'image2.png';
+  
+    // 0.5秒後に元の画像に戻す
+    setTimeout(() => {
+      img.src = 'image.png';
+    }, 500);
+  }
 });
 
