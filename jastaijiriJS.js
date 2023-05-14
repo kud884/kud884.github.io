@@ -27,28 +27,36 @@ img.addEventListener('click', () => {
   }, 500); // 500ミリ秒 = 0.5秒
 });
 
-let isPlaying = false;
+// 再生する音声のリスト
+const audios = [
+  new Audio('sound1.mp3'),
+  new Audio('sound2.mp3'),
+  new Audio('sound3.mp3')
+];
 
+// インデックスを保持する変数
+let currentIndex = 0;
+
+// タッチイベントの処理
 img.addEventListener('touchstart', () => {
-  if (!isPlaying) {
-    isPlaying = true;
-    
-    // ランダムに音声ファイルを再生する
-    const index = Math.floor(Math.random() * audios.length);
-    const audio = audios[index];
-    audio.play();
-    audio.addEventListener('ended', () => {
-      isPlaying = false;
-    });
-    
-    // 別の画像に切り替える
-    img.src = 'image2.png';
+  // 現在のインデックスに対応する音声を再生する
+  audios[currentIndex].play();
   
-    // 0.5秒後に元の画像に戻す
-    setTimeout(() => {
-      img.src = 'image.png';
-    }, 500);
+  // インデックスを次に進める
+  currentIndex++;
+  
+  // インデックスが配列の長さを超えた場合、最初に戻す
+  if (currentIndex >= audios.length) {
+    currentIndex = 0;
   }
+  
+  // 別の画像に切り替える
+  img.src = 'image2.png';
+  
+  // 0.5秒後に元の画像に戻す
+  setTimeout(() => {
+    img.src = 'image.png';
+  }, 2000);
 });
 
 
